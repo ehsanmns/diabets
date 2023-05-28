@@ -1,9 +1,9 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-
+import re
 import joblib
-
+model=joblib.load('sss.joblib')
 # Handling missing values
 df['Glucose'].fillna(df['Glucose'].mean(), inplace=True)
 
@@ -17,9 +17,6 @@ df = df[(df['BMI'] >= lower_bound) & (df['BMI'] <= upper_bound)]
 
 # Transforming data
 df['Age'] = df['Age'].apply(lambda x: 1 if x > 30 else 0)
-
-
-model=joblib.load('sss.joblib')
 
 st.title('Diabetes Prediction App')
 
