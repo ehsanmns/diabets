@@ -3,6 +3,11 @@ import numpy as np
 import pandas as pd
 import re
 import joblib
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.feature_selection import SelectKBest, f_classif
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 df=pd.read_csv('diabetes.csv')
 # Handling missing values
 df['Glucose'].fillna(df['Glucose'].mean(), inplace=True)
