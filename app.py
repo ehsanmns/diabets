@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import re
 import joblib
-
+df=pd.read_csv('diabetes.csv')
 # Handling missing values
 df['Glucose'].fillna(df['Glucose'].mean(), inplace=True)
 
