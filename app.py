@@ -58,11 +58,13 @@ input_data = selector.transform(input_data)
 prediction = model.predict(input_data)
 
 # Displaying the prediction
-def predict():
-if prediction == 0:
-    st.write('Congratulations! Based on the information you provided, it seems like you do not have diabetes.')
-else:
-    st.write('Sorry, based on the information you provided, it seems like you may have diabetes. We recommend consulting with a healthcare professional to discuss your options.')
-    
+def predict(): 
+    if prediction == 0: 
+        st.success('Congratulations! Based on the information you provided, it seems like you do not have diabetes. :thumbsup:')
+    else: 
+        st.error('Sorry, based on the information you provided, it seems like you may have diabetes. We recommend consulting with a healthcare professional to discuss your options :thumbsdown:') 
+
 trigger = st.button('Predict', on_click=predict)
+
+
 
