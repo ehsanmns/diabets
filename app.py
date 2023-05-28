@@ -62,3 +62,6 @@ if prediction == 0:
     st.write('Congratulations! Based on the information you provided, it seems like you do not have diabetes.')
 else:
     st.write('Sorry, based on the information you provided, it seems like you may have diabetes. We recommend consulting with a healthcare professional to discuss your options.')
+    
+    trigger = st.button('Predict', on_click=predict)
+
